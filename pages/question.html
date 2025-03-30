@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>New Quiz!</title>
+  <link rel="stylesheet" href="./styles/normalize.css" />
+  <link rel="stylesheet" href="./styles/style.css" />
+</head>
+
+<body>
+  <header>
+    <nav>
+      <input type="checkbox" id="menu" />
+      <label for="menu"></label>
+      <ul>
+        <li><a href="../home.html">Home</a></li>
+        <li><a href="./question.html">Quiz</a></li>
+        <li><a href="./results.html">Resultados</a></li>
+      </ul>
+    </nav>
+    <h1>Bienvenidos a nuestro Quiz</h1>
+  </header>
+  <main>
+    <!--Hacer un prompt para insertar el nombre y que se guarde en bDatos-->
+      <section id="containerPreguntas">
+        <div id="preguntas"></div>
+      </section>
+
+      <section id="containerRespuestas">
+        <div id="respuestas"></div>
+      </section>
+
+      <button class="button" id="next-button" >Siguiente</button>
+
+      <section id="containerGrafica">
+        <div id="grafica"></div>
+      </section>
+  </main>
+
+  <!--Footer-->
+  <footer>Creado por Alberto D. / Mario L. / Michelle Alejandra D.</footer>
+  <script src="./scripts/script.js"></script>
+</body>
+
+</html>

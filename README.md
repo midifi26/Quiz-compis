@@ -1,6 +1,6 @@
-Proyecto de Quiz Interactivo 🎮📊
+# Proyecto de Quiz Interactivo 🎮📊
 
-Este es un proyecto en grupo realizado por tres personas 👩‍💻👨‍💻👩‍💻, que tiene como objetivo la creación de un quiz interactivo utilizando HTML, CSS y JavaScript. El quiz permite al usuario responder 10 preguntas, cada una con 4 opciones posibles. Al final del cuestionario, se mostrarán los resultados de las respuestas del usuario en una gráfica interactiva 📊.
+Este es un proyecto en grupo realizado por tres personas 👨‍💻👩‍💻👨‍💻, que tiene como objetivo la creación de un quiz interactivo utilizando HTML, CSS y JavaScript. El quiz permite al usuario responder 10 preguntas, cada una con 4 opciones posibles. Al final del cuestionario, se mostrarán los resultados de las respuestas del usuario en una gráfica interactiva 📊.
 
 Colaboradores 🤝
 

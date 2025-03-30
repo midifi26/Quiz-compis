@@ -2,25 +2,29 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>New Quiz!</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz</title>
   <link rel="stylesheet" href="./styles/normalize.css" />
   <link rel="stylesheet" href="./styles/style.css" />
 </head>
 
 <body>
   <header>
-    <nav>
-      <input type="checkbox" id="menu" />
-      <label for="menu"></label>
-      <ul>
-        <li><a href="../home.html">Home</a></li>
-        <li><a href="./question.html">Quiz</a></li>
-        <li><a href="./results.html">Resultados</a></li>
+    <nav class="navbar">
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="menu-icono">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+      </label>
+
+      <ul class="nav-links">
+        <li><a href="./home.html">Home</a></li>
+        <li><a href="/pages/question.html">Quiz</a></li>
+        <li><a href="/pages/results.html">Resultados</a></li>
       </ul>
-    </nav>
-    <h1>Bienvenidos a nuestro Quiz</h1>
+  </nav>
   </header>
   <main>
     <!--Hacer un prompt para insertar el nombre y que se guarde en bDatos-->
@@ -38,9 +42,16 @@
         <div id="grafica"></div>
       </section>
   </main>
-
   <!--Footer-->
-  <footer>Creado por Alberto D. / Mario L. / Michelle Alejandra D.</footer>
+  <footer>
+    <div class="containerFooter">
+      <div class="elementosFooter">
+        <p>Alberto D.</p>
+        <p>Mario L.</p>
+        <p>Michelle Alejandra D.</p>
+      </div>
+    </div>
+  </footer>
   <script src="./scripts/script.js"></script>
 </body>
 

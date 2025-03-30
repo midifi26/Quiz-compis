@@ -1,25 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="es">
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Results</title>
     <link rel="stylesheet" href="./styles/normalize.css" />
     <link rel="stylesheet" href="./styles/style.css" />
-</head>
+  </head>
 <body>
-    <header>
-        <nav>
-          <input type="checkbox" id="menu" />
-          <label for="menu"></label>
-          <ul>
-            <li><a href="../home.html">Home</a></li>
-            <li><a href="./question.html">Quiz</a></li>
-            <li><a href="./results.html">Resultados</a></li>
-          </ul>
-        </nav>
-        <h1>Quiz</h1>
-      </header>
+  <header>
+    <nav class="navbar">
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="menu-icono">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+      </label>
+
+      <ul class="nav-links">
+        <li><a href="./home.html">Home</a></li>
+        <li><a href="./pages/question.html">Quiz</a></li>
+        <li><a href="./pages/results.html">Resultados</a></li>
+      </ul>
+  </nav>
+  </header>
       <main>
         <section class="container">
             <h2>Aqui van tus resultados!</h2>
@@ -27,9 +31,15 @@
             <button class="button" id="button-playAgain">Jugar otra vez</button>
         </section>
       </main>
-
-       <!--Footer-->
-    <footer></footer>
+      <footer>
+        <div class="containerFooter">
+          <div class="elementosFooter">
+            <p>Alberto D.</p>
+            <p>Mario L.</p>
+            <p>Michelle Alejandra D.</p>
+          </div>
+        </div>
+      </footer>
     <script src="./scripts/script.js"></script>
 </body>
 </html>

@@ -1,0 +1,125 @@
+{
+    "response_code": 0,
+    "results": [
+      {
+        "type": "multiple",
+        "difficulty": "medium",
+        "category": "Entertainment: Video Games",
+        "question": "How many unique items does &quot;Borderlands 2&quot; claim to have?",
+        "correct_answer": "87 Bazillion ",
+        "incorrect_answers": [
+          "87 Million",
+          "87 Trillion",
+          "87 Gazillion "
+        ]
+      },
+      {
+        "type": "multiple",
+        "difficulty": "medium",
+        "category": "Entertainment: Video Games",
+        "question": "In &quot;Clash Royale&quot; what is Arena 4 called?",
+        "correct_answer": "Spell Valley",
+        "incorrect_answers": [
+          "Barbarian Bowl",
+          "P.E.K.K.A&#039;s Playhouse",
+          "Royal Arena"
+        ]
+      },
+      {
+        "type": "multiple",
+        "difficulty": "medium",
+        "category": "Entertainment: Video Games",
+        "question": "What is the item required to summon the boss Duke Fishron in the game Terraria?",
+        "correct_answer": "Truffle Worm",
+        "incorrect_answers": [
+          "Suspicious Looking Fish",
+          "King Grasshopper",
+          "Slug"
+        ]
+      },
+      {
+        "type": "multiple",
+        "difficulty": "medium",
+        "category": "Entertainment: Video Games",
+        "question": "In the Kingdom Heart series who provides the english voice for Master Eraqus?",
+        "correct_answer": "Mark Hamill",
+        "incorrect_answers": [
+          "Jason Dohring",
+          "Jesse McCartney",
+          "Haley Joel Osment"
+        ]
+      },
+      {
+        "type": "multiple",
+        "difficulty": "medium",
+        "category": "Entertainment: Video Games",
+        "question": "Where was the Sniper character in Team Fortress 2 born?",
+        "correct_answer": "New Zealand",
+        "incorrect_answers": [
+          "South Africa",
+          "Antarctica",
+          "Australia"
+        ]
+      },
+      {
+        "type": "multiple",
+        "difficulty": "medium",
+        "category": "Entertainment: Video Games",
+        "question": "Which puzzle game was designed by a Russian programmer, featuring Russian buildings and music?",
+        "correct_answer": "Tetris",
+        "incorrect_answers": [
+          "Jenga",
+          "Boulder Dash",
+          "Puzzled"
+        ]
+      },
+      {
+        "type": "multiple",
+        "difficulty": "medium",
+        "category": "Entertainment: Video Games",
+        "question": "Killing Floor started as a mod for which Unreal Engine 2 game?",
+        "correct_answer": "Unreal Tournament 2004",
+        "incorrect_answers": [
+          "Deus Ex: Invisible War",
+          "Unreal Tournament 3",
+          "Postal"
+        ]
+      },
+      {
+        "type": "multiple",
+        "difficulty": "medium",
+        "category": "Entertainment: Video Games",
+        "question": "In World of Warcraft lore, who was first to have the title &quot;The Ashbringer&quot;?",
+        "correct_answer": "Alexandros Mograine",
+        "incorrect_answers": [
+          "Tirion Fordring",
+          "Arthas Menethil",
+          "Uther the Lightbringer"
+        ]
+      },
+      {
+        "type": "multiple",
+        "difficulty": "medium",
+        "category": "Entertainment: Video Games",
+        "question": "In Terraria, which of the following items does the Martian Saucer mini-boss NOT drop?",
+        "correct_answer": "Drill Containment Unit",
+        "incorrect_answers": [
+          "Anti-Gravity Hook",
+          "Influx Waver",
+          "Cosmic Car Key"
+        ]
+      },
+      {
+        "type": "multiple",
+        "difficulty": "medium",
+        "category": "Entertainment: Video Games",
+        "question": "Which of these characters won the Super Smash Bros. Fighter Ballot in 2015?",
+        "correct_answer": "Bayonetta",
+        "incorrect_answers": [
+          "Cloud",
+          "Ryu",
+          "Megaman"
+        ]
+      }
+    ]
+  }

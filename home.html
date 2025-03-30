@@ -1,17 +1,45 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz</title>
-    <link rel="stylesheet" href="styles/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="./styles/normalize.css" />
+  <link rel="stylesheet" href="./styles/style.css" />
 </head>
+
 <body>
-    <div class="container">
-        <div id="home" class="flex-center flex-column">
-            <h1>Quizge</h1>
-            <a class="boton" href="/index.html">Jugar</a>
-        </div>
-    </div>
+  <header>
+    <nav>
+      <input type="checkbox" id="menu-home" />
+      <label for="menu"></label>
+      <ul>
+        <li><a href="./home.html">Home</a></li>
+        <li><a href="./pages/questions.html">Quiz</a></li>
+        <li><a href="./pages/results.html">Resultados</a></li>
+      </ul>
+    </nav>
+    <h1>Bienvenidos a nuestro Quiz</h1>
+  </header>
+  <main>
+    <section class="container" id="containerBienvenida">
+      <div id="bienvenida">
+        <h2>Bienvenido al Quizge</h2>
+      </div>
+      <button class="button" id="comienzo-quiz">Empiezar Quiz!</button>
+    </section>
+
+    <section class="container" id="containerEstadisticas">
+      <div id="estadisticas">
+      </div>
+    </section>
+  </main>
+
+  <!--Footer-->
+  <footer>Creado por Alberto D. / Mario L. / Michelle Alejandra D.</footer>
+  <script src="./scripts/script.js"></script>
+
 </body>
+
 </html>

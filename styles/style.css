@@ -164,7 +164,24 @@ h2 {
     font-weight: 700;
 }
 
+#next-button, #comienzo-quiz {
+    background-color: var(--color-fondo-cajas);
+    border-radius: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#button-playAgain {
+    background-color: var(--color-fondo-cajas);
+}
+
 .button {
+    display: block;
     font-size: 1.8rem;
     padding: 1rem 0;
     width: 20rem;

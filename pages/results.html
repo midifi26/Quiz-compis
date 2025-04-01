@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Results</title>
-    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="../styles/normalize.css" />
     <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chartist@0.11.0/dist/chartist.min.css">
+    
   </head>
 <body>
   <header>
@@ -19,8 +21,8 @@
 
       <ul class="nav-links">
         <li><a href="../home.html">Home</a></li>
-        <li><a href="./question.html">Quiz</a></li>
-        <li><a href="./results.html">Resultados</a></li>
+        <li><a href="../question.html">Quiz</a></li>
+        <li><a href="../results.html">Resultados</a></li>
       </ul>
   </nav>
   </header>
@@ -28,6 +30,8 @@
         <section class="container">
             <h2>Aqui van tus resultados!</h2>
             <h3>¡Muchas gracias por jugar!</h3>
+
+            <div id="grafica"></div>
             <button class="button" id="button-playAgain">Jugar otra vez</button>
         </section>
       </main>
@@ -40,6 +44,7 @@
           </div>
         </div>
       </footer>
-    <script src="./scripts/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartist@0.11.0/dist/chartist.min.js"></script>
+    <script src="../scripts/results.js"></script>
 </body>
 </html>

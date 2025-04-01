@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const botonInicio = document.getElementById("comienzo-quiz");
     if(botonInicio){
         botonInicio.addEventListener("click", () => {
-            window.location.href = "./pages/question.html"
+            window.location.href = "../pages/question.html"
         })
     }
     iniciarQuiz()
@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 async function getData() { //Llamada a la API para conseguir las preguntas y respuestas
     try{
-        const response = await fetch("../json/questions.json");
+        const response = await fetch("https://opentdb.com/api.php?amount=10&difficulty=medium&type=multiple");
         if(!response.ok) throw new Error(`Error HTTP: ${response.status}`);
         const data = await response.json();
         iniciarQuiz(data.results); //Iniciamos la función con los datos recogidos
@@ -26,7 +26,12 @@ function iniciarQuiz(preguntas) { //Iniciamos la función con el parámetro preg
     function pintarPregunta() {
         if (indicePregunta >= preguntas.length) {  //Condicional para determinar si el usuario ha llegado al final del quiz
             alert("Has terminado el juego");
-            return;
+            const botonSiguiente = document.getElementById("next-button"); //Pintamos el botón y el evento para pasar a resultados
+            botonSiguiente.textContent = "Pasar a resultados";
+            botonSiguiente.style.backgroundColor = "green";
+            botonSiguiente.addEventListener("click", () => {
+                window.location.href = "../pages/results.html";
+            })
         }
 
         const preguntaActual = preguntas[indicePregunta]; //Seleccionamos la pregunta actual (índice 0)
@@ -52,9 +57,9 @@ function iniciarQuiz(preguntas) { //Iniciamos la función con el parámetro preg
         indicePregunta++;
         pintarPregunta();
     });
-
     pintarPregunta();
 }
+
 
 function shuffleArray(array) {
     return array.sort(() => Math.random() - 0.5); //El -0.5 asegura que el orden del .sort sea aleatorio

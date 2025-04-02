@@ -231,3 +231,13 @@ footer{
     font-size: 20px;
     gap: 5%;
 }
+
+#music-control {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+#music-icon {
+  font-size: 20px;
+}

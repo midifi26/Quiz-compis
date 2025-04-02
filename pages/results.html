@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Results</title>
-    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="../styles/normalize.css" />
     <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chartist@0.11.0/dist/chartist.min.css">
+    
   </head>
 <body>
   <header>
@@ -29,6 +31,8 @@
             <h2>Aqui van tus resultados!</h2>
             <div id="container-puntuacion"></div>
             <h3>¡Muchas gracias por jugar!</h3>
+
+            <div id="grafica"></div>
             <button class="button" id="button-playAgain">Jugar otra vez</button>
         </section>
       </main>
@@ -46,5 +50,7 @@
         </div>
       </footer>
     <script src="../scripts/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartist@0.11.0/dist/chartist.min.js"></script>
+    <script src="../scripts/results.js"></script>
 </body>
 </html>

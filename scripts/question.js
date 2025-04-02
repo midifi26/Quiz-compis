@@ -73,15 +73,13 @@ function iniciarQuiz(preguntas) { //Iniciamos la función con el parámetro preg
                 cajaRespuestas.appendChild(btn);
             });
     }
-<<<<<<< HEAD
 
     document.getElementById("next-button")?.addEventListener("click", () => { //Evento click para pasar a la siguiente pregunta
         indicePregunta++;
         
         pintarPregunta();
     });
-=======
->>>>>>> def6de9f9d82353c84b33291279f21ea488bfd11
+
     pintarPregunta();
 }
 

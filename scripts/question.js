@@ -55,6 +55,7 @@ function iniciarQuiz(preguntas) { //Iniciamos la función con el parámetro preg
 
     document.getElementById("next-button")?.addEventListener("click", () => { //Evento click para pasar a la siguiente pregunta
         indicePregunta++;
+        
         pintarPregunta();
     });
     pintarPregunta();

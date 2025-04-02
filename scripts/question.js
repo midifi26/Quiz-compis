@@ -54,7 +54,7 @@ function iniciarQuiz(preguntas) { //Iniciamos la función con el parámetro preg
         shuffleArray([preguntaActual.correct_answer, ...preguntaActual.incorrect_answers]) //suffleArray mezcla las preguntas correctas e incorrectas
             .forEach(opcion => {
                 const btn = document.createElement("button");
-                btn.textContent = opcion;
+                btn.innerHTML = opcion;
                 btn.classList.add("button");
 
                 btn.onclick = () => {
@@ -62,7 +62,13 @@ function iniciarQuiz(preguntas) { //Iniciamos la función con el parámetro preg
                         btn.style.backgroundColor = "green"; //Se pinta el fondo de verde si acierta
                         incrementoMarcador(10) //Sumamos a la puntuación 10 puntos
                     } else {
-                        btn.style.backgroundColor = "red"
+                        btn.style.backgroundColor = "red";
+                                                                                // Pintar en verde la opción correcta si el usuario ha fallado
+                        Array.from(cajaRespuestas.children).forEach(boton => { // .children devuelve una colección de los elementos hijos
+                            if(boton.innerHTML === preguntaActual.correct_answer){ // de cajaRespuestas.
+                                boton.style.backgroundColor = "green";
+                            }
+                        })
                     }
 
                     setTimeout(() => { //Damos un tiempo para pasar a la siguiente pregunta
@@ -73,19 +79,12 @@ function iniciarQuiz(preguntas) { //Iniciamos la función con el parámetro preg
                 cajaRespuestas.appendChild(btn);
             });
     }
-
-    document.getElementById("next-button")?.addEventListener("click", () => { //Evento click para pasar a la siguiente pregunta
-        indicePregunta++;
-        
-        pintarPregunta();
-    });
-
     pintarPregunta();
 }
 
 
 function shuffleArray(array) {
-    return array.sort(() => Math.random()); //Función para que nos dé preguntas y resuestas aleatorias
+    return array.sort(() => Math.random() - 0.5); //Función para que nos dé preguntas y resuestas aleatorias
 }
 
 getData();

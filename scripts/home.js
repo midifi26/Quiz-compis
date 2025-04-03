@@ -7,6 +7,8 @@ containerNombreUsuario.appendChild(inputNombreUsuario)
 //Recuperamos de Local Storage el nombre si existe
 inputNombreUsuario.value = localStorage.getItem("Nombre") || "";
 
+inputNombreUsuario.value = "";
+
 const containerCorreoUsuario = document.getElementById("container-correoUsuario")
 const inputCorreoUsuario = document.createElement("input")
 inputCorreoUsuario.placeholder = "Introduce tu correo"
@@ -15,6 +17,8 @@ containerCorreoUsuario.appendChild(inputCorreoUsuario)
 
 //Hacemos lo mismo con el correo
 inputCorreoUsuario.value = localStorage.getItem("Correo") || "";
+
+inputCorreoUsuario.value = "";
 
 const botonInicio = document.getElementById("comienzo-quiz");
 

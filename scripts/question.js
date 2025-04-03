@@ -2,8 +2,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const nombreUsuario = localStorage.getItem("Nombre")?.trim(); // El ? verifica si el objeto o propiedad existe
     const correoUsuario = localStorage.getItem("Correo")?.trim(); // devuelve undefined si no existe
 
- 
-
     const botonInicio = document.getElementById("comienzo-quiz");
     if(botonInicio) {
         botonInicio.addEventListener("click", () => {
@@ -92,13 +90,20 @@ function iniciarQuiz(preguntas) { //Iniciamos la función con el parámetro preg
 function guardarPuntuacion(puntos) { //Mandamos la puntuación a Local Storage
     let puntuaciones = JSON.parse(localStorage.getItem("Puntuacion")) || []; //Mandamos la puntuación a Local Storage
 
-    const nuevaPuntuacion = { //Creamos el objeto donde guardar la puntuación
-        nombre: localStorage.getItem("Nombre"),
-        correo: localStorage.getItem("Correo"),
-        puntuacion: puntos
+    const nuevaPuntuacion = { //Creamos el objeto donde guardar toda la información
+            nombre: localStorage.getItem("Nombre"),
+            correo: localStorage.getItem("Correo"),
+            puntuacion: puntos
     };
 
-    puntuaciones.push(nuevaPuntuacion); //Utilizamos push para introducir las puntuaciones en el objeto
+    //Comprobamos si en Local Storage hay un usuario con el mismo nombre y correo
+    const comprobarUsuario = puntuaciones.find(p => p.nombre === nuevaPuntuacion.nombre && p.correo === nuevaPuntuacion.correo);
+    if(comprobarUsuario){
+        comprobarUsuario.puntuacion = nuevaPuntuacion.puntuacion;
+    } else { //Si no existe, metemos la nueva puntuación
+        puntuaciones.push(nuevaPuntuacion)
+    }
+
     localStorage.setItem("Puntuacion", JSON.stringify(puntuaciones)) //Enviamos las puntuaciones a Local Storage
 
 }

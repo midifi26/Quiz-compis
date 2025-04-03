@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> 9615c35de46543d4bf1edc09e5b8a8cd5c35fad9
 
 document.addEventListener("DOMContentLoaded", () => {
   let puntuacion = localStorage.getItem("Marcador"); //Recuperamos la puntuación de Local Storage
@@ -11,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   } else {
     console.log("No se ha encontrado la puntuación");
   }
-  let acertadas = puntuacion;
+  let acertadas = parseInt(puntuacion);//convertir el resultado en numer entero.
   let falladas = 100 - acertadas;
 
   function graficaRespuestas() {

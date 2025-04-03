@@ -18,13 +18,16 @@ async function getData() { //Llamada a la API para conseguir las preguntas y res
         if(!data.results){
             throw new Error("No se obtuvieron las preguntas de la API")
         }
+        
         iniciarQuiz(data.results); //Iniciamos la función con los datos recogidos
+        return getData()
     } catch (error) {
         console.error("Error al obtener las preguntas: ", error.message)
     }
 }
 
 function iniciarQuiz(preguntas) { //Iniciamos la función con el parámetro preguntas para que las reciba desde la API
+    console.log("****",preguntas);
     let indicePregunta = 0;
     let marcador = 0;
     let numeroMarcador = document.getElementById("numero-marcador");

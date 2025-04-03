@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9615c35de46543d4bf1edc09e5b8a8cd5c35fad9
 
 document.addEventListener("DOMContentLoaded", () => {
   let puntuacion = localStorage.getItem("Marcador"); //Recuperamos la puntuación de Local Storage
@@ -61,12 +64,33 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-/*function playAgain(){
-    const botonJugarOtraVez = document.getElementById("button-playAgain");
-    if(botonJugarOtraVez){
-        botonJugarOtraVez.addEventListener("click", () => {
-            window.location.href = "./pages/question.html"
-        })
-    }
+document.addEventListener("DOMContentLoaded", () => { //Función para empezar el quiz de nuevo
+
+  const botonJugardeNuevo = document.getElementById("button-playAgain");
+  if(botonJugardeNuevo){
+      botonJugardeNuevo.addEventListener("click", () => {
+          window.location.href = "../pages/question.html"
+      })
+  }
+})
+
+
+const musicControl = document.getElementById('music-control');
+const musicIcon = document.getElementById('music-icon');
+const backgroundMusic = document.getElementById('background-music');
+
+//Este if hace que la musica este encendida al cargar la pagina
+if (backgroundMusic.paused || backgroundMusic.ended) {
+  backgroundMusic.play(); 
+  musicIcon.textContent = '⏸️';
 }
-playAgain()*/
+//Boton musica para pausar y reproducir la musica
+musicControl.addEventListener('click', () => {
+  if (backgroundMusic.paused || backgroundMusic.ended) {
+    backgroundMusic.play();
+    musicIcon.textContent = '⏸️'; // Cambiar a icono de pausa
+  } else {
+    backgroundMusic.pause();
+    musicIcon.textContent = '▶️'; // Cambiar a icono de play
+  }
+});

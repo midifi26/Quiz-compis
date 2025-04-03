@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const nombreUsuario = localStorage.getItem("Nombre")?.trim(); // El ? verifica si el objeto o propiedad existe
     const correoUsuario = localStorage.getItem("Correo")?.trim(); // devuelve undefined si no existe
-
+    
     const botonInicio = document.getElementById("comienzo-quiz");
     if(botonInicio) {
         botonInicio.addEventListener("click", () => {

@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const botonInicio = document.getElementById("comienzo-quiz");
     if(botonInicio){
         botonInicio.addEventListener("click", () => {
-            window.location.href = "../pages/question.html"
+            window.location.href = "./pages/question.html"
         })
     }
     iniciarQuiz()

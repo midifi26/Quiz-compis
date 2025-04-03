@@ -1,12 +1,16 @@
 document.addEventListener("DOMContentLoaded", () => {
+    const nombreUsuario = localStorage.getItem("Nombre")?.trim(); // El ? verifica si el objeto o propiedad existe
+    const correoUsuario = localStorage.getItem("Correo")?.trim(); // devuelve undefined si no existe
+
+ 
 
     const botonInicio = document.getElementById("comienzo-quiz");
-    if(botonInicio){
+    if(botonInicio) {
         botonInicio.addEventListener("click", () => {
             window.location.href = "../pages/question.html"
         })
     }
-    iniciarQuiz()
+    iniciarQuiz(); //Iniciar el quiz solo si el usuario ha introducido nombre y correo
 })
 
 async function getData() { //Llamada a la API para conseguir las preguntas y respuestas
@@ -18,16 +22,14 @@ async function getData() { //Llamada a la API para conseguir las preguntas y res
         if(!data.results){
             throw new Error("No se obtuvieron las preguntas de la API")
         }
-        
         iniciarQuiz(data.results); //Iniciamos la función con los datos recogidos
-        return getData()
+
     } catch (error) {
         console.error("Error al obtener las preguntas: ", error.message)
     }
 }
 
 function iniciarQuiz(preguntas) { //Iniciamos la función con el parámetro preguntas para que las reciba desde la API
-    console.log("****",preguntas);
     let indicePregunta = 0;
     let marcador = 0;
     let numeroMarcador = document.getElementById("numero-marcador");
@@ -35,16 +37,18 @@ function iniciarQuiz(preguntas) { //Iniciamos la función con el parámetro preg
     const incrementoMarcador = num => { //función para meter la suma de los aciertos en el marcador
         marcador += num;
         numeroMarcador.innerText = marcador;
-        localStorage.setItem("Marcador", marcador); //Mandamos la puntuación a Local Storage
     }
 
     function pintarPregunta() {
         if (indicePregunta >= preguntas.length) {  //Condicional para determinar si el usuario ha llegado al final del quiz
+            guardarPuntuacion(marcador); //Función para guardar la puntuación del usuario
             alert("Has terminado el juego");
             return window.location.assign("../pages/results.html"); //Nos lleva directamente a la página de resultados tras el alert
         }
 
+
         const preguntaActual = preguntas[indicePregunta]; //Seleccionamos la pregunta actual (índice 0)
+
         if(!preguntaActual){ 
             console.error(`No se pudo obtener la pregunta en el índice ${indicePregunta}`)
         }
@@ -65,11 +69,10 @@ function iniciarQuiz(preguntas) { //Iniciamos la función con el parámetro preg
                         btn.style.backgroundColor = "green"; //Se pinta el fondo de verde si acierta
                         incrementoMarcador(10) //Sumamos a la puntuación 10 puntos
                     } else {
-                        btn.style.backgroundColor = "red";
-                                                                                // Pintar en verde la opción correcta si el usuario ha fallado
-                        Array.from(cajaRespuestas.children).forEach(boton => { // .children devuelve una colección de los elementos hijos
-                            if(boton.innerHTML === preguntaActual.correct_answer){ // de cajaRespuestas.
-                                boton.style.backgroundColor = "green";
+                        btn.style.backgroundColor = "red";                                                                 
+                        Array.from(cajaRespuestas.children).forEach(boton => { // Pintar en verde la opción correcta si el usuario ha fallado
+                            if(boton.innerHTML === preguntaActual.correct_answer){ // .children devuelve una colección de los elementos hijos
+                                boton.style.backgroundColor = "green"; // de cajaRespuestas.
                             }
                         })
                     }
@@ -86,8 +89,24 @@ function iniciarQuiz(preguntas) { //Iniciamos la función con el parámetro preg
 }
 
 
+function guardarPuntuacion(puntos) { //Mandamos la puntuación a Local Storage
+    let puntuaciones = JSON.parse(localStorage.getItem("Puntuacion")) || []; //Mandamos la puntuación a Local Storage
+
+    const nuevaPuntuacion = { //Creamos el objeto donde guardar la puntuación
+        nombre: localStorage.getItem("Nombre"),
+        correo: localStorage.getItem("Correo"),
+        puntuacion: puntos
+    };
+
+    puntuaciones.push(nuevaPuntuacion); //Utilizamos push para introducir las puntuaciones en el objeto
+    localStorage.setItem("Puntuacion", JSON.stringify(puntuaciones)) //Enviamos las puntuaciones a Local Storage
+
+}
+
 function shuffleArray(array) {
     return array.sort(() => Math.random() - 0.5); //Función para que nos dé preguntas y resuestas aleatorias
 }
 
 getData();
+
+

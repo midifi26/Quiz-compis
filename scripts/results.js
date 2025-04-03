@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => { //Función para empezar el
   const botonJugardeNuevo = document.getElementById("button-playAgain");
   if(botonJugardeNuevo){
       botonJugardeNuevo.addEventListener("click", () => {
-          window.location.href = "../pages/question.html"
+        window.location.href = "/index.html"
       })
   }
 })

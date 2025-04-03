@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const botonInicio = document.getElementById("comienzo-quiz");
     if(botonInicio){
         botonInicio.addEventListener("click", () => {
-            window.location.href = "../pages/question.html"
+            window.location.href = "./pages/question.html"
         })
     }
     iniciarQuiz()
@@ -41,7 +41,7 @@ function iniciarQuiz(preguntas) { //Iniciamos la función con el parámetro preg
     function pintarPregunta() {
         if (indicePregunta >= preguntas.length) {  //Condicional para determinar si el usuario ha llegado al final del quiz
             alert("Has terminado el juego");
-            return window.location.assign("../pages/results.html"); //Nos lleva directamente a la página de resultados tras el alert
+            return window.location.assign("./results.html"); //Nos lleva directamente a la página de resultados tras el alert
         }
 
         const preguntaActual = preguntas[indicePregunta]; //Seleccionamos la pregunta actual (índice 0)

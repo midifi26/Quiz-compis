@@ -1,4 +1,4 @@
-const firebaseConfig = {
+/*const firebaseConfig = {
   apiKey: "AIzaSyDMCbR8NylUNMtSOsPnCZgHdcALalIyVO0",
   authDomain: "proyecto-quiz-d7308.firebaseapp.com",
   projectId: "proyecto-quiz-d7308",
@@ -17,5 +17,5 @@ const nameDB = (array) => {
       console.log("Document written with ID: ", docRef.id);
   })
   .catch((error) => console.error("Error adding document: ", error));
-}
+}*/
 
